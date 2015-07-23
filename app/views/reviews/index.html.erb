@@ -1,0 +1,7 @@
+MOVIEW REVIEWS INDEX(IEW)
+
+<ul>
+  <% @reviews.each do |review| %>
+  <li> <%= link_to "#{review.moviename}", review_url(review) %> </li>
+  <% end %>
+</ul>

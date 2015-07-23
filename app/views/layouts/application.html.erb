@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MovieRatingApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+<br>
+<span>
+  <%= link_to "Movies Home", movies_url %>
+  <%= link_to "All Reviews", reviews_url %>
+</span>
+
+</body>
+</html>

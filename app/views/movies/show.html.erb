@@ -1,0 +1,32 @@
+<% m_name = @moviename.gsub("%20", " ").gsub("/movies/", " ").strip %>
+<h4> <%= m_name %> </h4>
+
+<ul>
+  <% @reviews.each do |review| %>
+      <% if review.moviename == m_name %>
+        <li>
+          Rating: <%= review.rating %> <br>
+          Comment: <%= review.comment %> <br>
+          User: <%= review.email %>
+        </li>
+      <% end %>
+  <% end %>
+</ul>
+
+
+<form class="reviewform" action="/reviews" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="text" name="review[email]" id="user_email">Your Email</text>
+  <br>
+  <input type="text" name="review[moviename]" id="movie_name">Movie name</text>
+  <br>
+  <select class="" name="review[rating]">
+    <% 10.times do |i| %>
+      <option value="<%= i+1 %>"><%= i+1 %></option>
+    <% end %>
+  </select>
+  <br>
+  <textarea name="review[comment]" id="review_comment" rows="8" cols="40"></textarea>
+  <br>
+  <input type="submit" value="Post Review!">
+</form>
