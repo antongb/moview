@@ -1,9 +1,11 @@
 ## moview
 
-[x] AJAX call to 3rd part API (www.myapifilms.com)
-[x] DB with reviews table containing reviews for movies on list
-[x] movie review view page
-[x] all reviews index page
+moview because of how many times the 'w' snuck its way into 'movie'
+
+- [x] AJAX call to 3rd part API (www.myapifilms.com)
+- [x] DB with reviews table containing reviews for movies on list
+- [x] movie review view page
+- [x] all reviews index page
 
 ## Notes on this exercise:
 
@@ -26,4 +28,8 @@
 > the movie object array to a variable in the js file as it aleady is.
 > On sort calls from the rails view I would sort and clear/reappend.
 > If I had movies saved to the database it would have been a lot
-> simpler to setup sorts via helper methods. 
+> simpler to setup sorts via helper methods.
+
+## live:
+[link](http://moviewreview.herokuapp.com/)
+>I didn't setup a pinging profile so it might take a few seconds for the dyno to wind up

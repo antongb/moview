@@ -1,7 +1,7 @@
 var movieArr;
 
 myapifilms = function(array){
-       console.log(array);
+      //  console.log(array);
        movieArr = array;
        $(".movies").html("<ul>");
        $(array).each(function (idx, movie) {
@@ -15,7 +15,7 @@ var jsonpRequest = function(url, callback) {
    type: "GET",
    url: "http://www.myapifilms.com/imdb/top",
    dataType: 'jsonp',
-   data: {format: 'JSONP'}
+   data: {format: 'JSONP', end: 25}
  })
    .done(function( data ) {
 
