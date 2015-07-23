@@ -9,9 +9,4 @@ class MoviesController < ApplicationController
     @reviews = Review.all
   end
 
-  # private
-  #
-  # def review_params
-  #   params.require(:review).permit(:moviename, :email, :rating, :comment)
-  # end
 end
